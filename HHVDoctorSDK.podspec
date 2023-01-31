@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
     
     s.dependency 'TXIMSDK_iOS'
-    s.dependency 'TXLiteAVSDK_TRTC',"10.2.11418"
+    s.dependency 'TXLiteAVSDK_Professional',"10.2.11418"
     
     s.vendored_frameworks = 'HHVDoctorSDK/*.framework','HHVDoctorSDK/*.xcframework'
     s.resources = 'HHVDoctorSDK/resources/*.bundle'
