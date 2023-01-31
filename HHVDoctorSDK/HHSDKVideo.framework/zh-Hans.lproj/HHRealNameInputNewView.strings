@@ -1,0 +1,27 @@
+
+/* Class = "UITextField"; placeholder = "请输入身份证号"; ObjectID = "4uF-mc-Xmz"; */
+"4uF-mc-Xmz.placeholder" = "请输入身份证号";
+
+/* Class = "UITextField"; placeholder = "请输入身份证号"; ObjectID = "E09-0a-2sA"; */
+"E09-0a-2sA.placeholder" = "请输入身份证号";
+
+/* Class = "UILabel"; text = "aaaaaa"; ObjectID = "ESx-4N-xvB"; */
+"ESx-4N-xvB.text" = "aaaaaa";
+
+/* Class = "UILabel"; text = "身份证号"; ObjectID = "EUU-Wr-Dgp"; */
+"EUU-Wr-Dgp.text" = "身份证号";
+
+/* Class = "UILabel"; text = "手机号码"; ObjectID = "MYm-9o-RIP"; */
+"MYm-9o-RIP.text" = "手机号码";
+
+/* Class = "UILabel"; text = "身份证号输入错误，请重新输入"; ObjectID = "Sol-rY-Qkq"; */
+"Sol-rY-Qkq.text" = "身份证号输入错误，请重新输入";
+
+/* Class = "UILabel"; text = "需实名成员"; ObjectID = "V7V-P0-NiW"; */
+"V7V-P0-NiW.text" = "需实名成员";
+
+/* Class = "UITextField"; placeholder = "请输入身份证号"; ObjectID = "bqU-aR-GVR"; */
+"bqU-aR-GVR.placeholder" = "请输入身份证号";
+
+/* Class = "UILabel"; text = "真实姓名"; ObjectID = "y53-HA-nfR"; */
+"y53-HA-nfR.text" = "真实姓名";

@@ -1,0 +1,326 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4.2 (swiftlang-1205.0.28.2 clang-1205.0.19.57)
+// swift-module-flags: -target arm64-apple-ios10.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name hhVDoctorSDK
+import Foundation
+import HHSDKVideo
+import ImSDK
+import Swift
+import TXLiteAVSDK_TRTC
+import UIKit
+@_exported import hhVDoctorSDK
+public protocol HHHUDable {
+  var autoDismissDuration: Foundation.TimeInterval { get }
+  func showHUD()
+  func dismissHUD()
+  func showSuccess(_ message: Swift.String?)
+  func showError(_ messgae: Swift.String?)
+  func setDismissDuration(_ duraion: Foundation.TimeInterval)
+}
+@_inheritsConvenienceInitializers @objc public class HHLocation : ObjectiveC.NSObject {
+  @objc public static let `default`: hhVDoctorSDK.HHLocation
+  @objc public func startLocation(lng: Swift.String, lat: Swift.String)
+  @objc public func closeLocation()
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class HHMSDK : ObjectiveC.NSObject {
+  @objc public static let `default`: hhVDoctorSDK.HHMSDK
+  @objc public var SDKVersion: Swift.String {
+    @objc get
+  }
+  @objc public var isLogined: Swift.Bool {
+    @objc get
+  }
+  @objc public var aliPayHook: ((Swift.String, Swift.String, @escaping (([Swift.String : Any]) -> Swift.Void)) -> Swift.Bool)? {
+    @objc get
+    @objc set
+  }
+  @objc public var photosPreview: ((Swift.Array<Swift.String>) -> Swift.Void)? {
+    @objc get
+    @objc set
+  }
+  public var timKickoutCallback: (() -> Swift.Void)?
+  @objc public func start(option: hhVDoctorSDK.HHSDKOptions)
+  @objc public func add(delegate: hhVDoctorSDK.HHMVideoDelegate)
+  @objc public func remove(delegate: hhVDoctorSDK.HHMVideoDelegate)
+  @objc public func switchEnv(_ development: Swift.Bool)
+  @objc public func setLocation(lng: Swift.String, lat: Swift.String)
+  @objc deinit
+}
+extension HHMSDK {
+  @objc dynamic public func skipChatHome(skipType: hhVDoctorSDK.SkipType = .push, vc: UIKit.UIViewController? = nil)
+  @objc dynamic public func skipChatHome(_ nav: UIKit.UINavigationController)
+  @objc dynamic public func chatHomeVC() -> UIKit.UIViewController?
+  @objc dynamic public var userToken: Swift.String? {
+    @objc get
+  }
+}
+extension HHMSDK {
+  public func waitExpert(userToken: Swift.String, callOrderId: Swift.String)
+}
+extension HHMSDK {
+  @objc dynamic public func login(userToken: Swift.String, completion: @escaping HHSDKVideo.HHLoginHandler)
+  @objc dynamic public func autoLogin(uuid: Swift.Int, completion: @escaping HHSDKVideo.HHLoginHandler)
+  @objc dynamic public func logout(complete: ((Swift.String?) -> Swift.Void)? = nil)
+  @objc dynamic public func terminate()
+  @objc dynamic public func checkAutoLogin()
+}
+extension HHMSDK {
+  @objc dynamic public func startCall(_ type: HHSDKVideo.HHCallType)
+  @available(*, deprecated, message: "Use call(userToken : String) instead.")
+  @objc dynamic public func startCall(_ uuid: Swift.Int, type: HHSDKVideo.HHCallType = .adult, callDelegate: HHSDKVideo.HHCallDelegate? = nil)
+  @objc dynamic public func call(userToken: Swift.String)
+  @available(*, deprecated, message: "Use call(userToken : String) instead.")
+  @objc dynamic public func startNewCall(_ uuid: Swift.Int)
+}
+extension HHMSDK {
+  @objc dynamic public func loginForThirdId(_ thirdInfo: [Swift.String : Any], completion: @escaping HHSDKVideo.HHLoginHandler)
+}
+extension HHMSDK {
+  @objc dynamic public func startTeamCall(_ type: HHSDKVideo.HHCallType, callee: HHSDKVideo.HHCallerInfo)
+}
+extension HHMSDK {
+  @objc dynamic public func startMemberCall(needSelectMember: Swift.Bool = true)
+}
+extension HHMSDK {
+  @objc dynamic public func getMedicDetail(userToken: Swift.String, medicId: Swift.String) -> Swift.String
+  @objc dynamic public func getMedicList(userToken: Swift.String) -> Swift.String
+  @objc dynamic public func getAllMedics(userToken: Swift.String) -> Swift.String
+}
+@objc public enum SkipType : Swift.Int {
+  case push
+  case present
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension HHMSDK : HHSDKVideo.HHBaseVideoDelegate {
+  @objc dynamic public func onStart(orderId: Swift.String?)
+  @objc dynamic public func callStateChange(_ state: HHSDKVideo.HHBaseCallingState)
+  @objc dynamic public func callDidEstablish()
+  @objc dynamic public func getChatParentView(_ view: UIKit.UIView)
+  @objc dynamic public func callFail(code: Swift.Int, error: Swift.String)
+  @objc dynamic public func onFail(_ errorCode: Swift.Int, errrorStr: Swift.String?)
+  @objc dynamic public func onCancel()
+  @objc dynamic public func receivedOrder(_ orderId: Swift.String)
+  @objc dynamic public func callDidFinish()
+  @objc dynamic public func onExtensionDoctor()
+  @objc dynamic public func onReceive(_ callID: Swift.String)
+  @objc dynamic public func onResponse(_ accept: Swift.Bool)
+  @objc dynamic public func onForceOffline()
+  @objc dynamic public func inviteFamily(_ page: Swift.String)
+  @objc dynamic public func goPayCount(_ url: Swift.String)
+  @objc dynamic public func onLeakPermission(_ type: HHSDKVideo.HHBasePermissionType)
+}
+@objc public protocol HHMVideoDelegate {
+  @objc optional func callStateChange(_ state: hhVDoctorSDK.HHMCallingState)
+  @objc optional func onStart(orderId: Swift.String?)
+  @objc optional func callDidEstablish()
+  @objc optional func getChatParentView(_ view: UIKit.UIView)
+  @objc optional func onFail(_ errorCode: Swift.Int, errrorStr: Swift.String?)
+  @objc optional func onCancel()
+  @objc optional func callDidFinish()
+  @objc optional func onExtensionDoctor()
+  @objc optional func onReceive(_ callID: Swift.String)
+  @objc optional func onResponse(_ accept: Swift.Bool)
+  @objc optional func onForceOffline()
+  @objc optional func inviteFamily(_ page: Swift.String)
+  @objc optional func goPayCount(_ url: Swift.String)
+}
+@objc public enum HHMCallingState : Swift.Int {
+  case onStart = 0
+  case waitingDoctor
+  case callFreeDoctor
+  case callConnect
+  case didRing
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public var HMDefaultOpt: hhVDoctorSDK.HHSDKOptions {
+  get
+}
+public var HMHudManager: hhVDoctorSDK.HHHUDable {
+  get
+}
+@objc public class HHSDKOptions : ObjectiveC.NSObject, HHSDKVideo.OptionProtocal {
+  @objc public static let `default`: hhVDoctorSDK.HHSDKOptions
+  @objc public var hudDisTime: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc public var isDebug: Swift.Bool
+  @objc public var isDevelopment: Swift.Bool
+  @objc public var pHudManager: HHSDKVideo.HHVideoHUDable
+  public var hudManager: hhVDoctorSDK.HHHUDable
+  @objc public var productId: Swift.String
+  @objc public var cerName: Swift.String?
+  @objc public var logLevel: HHSDKVideo.HHLogMode
+  @objc public var mExtension: Swift.String
+  @objc public var changeDoctorTime: Swift.Int
+  @objc public var logCallback: ((Swift.String) -> Swift.Void)?
+  @objc public var mVideoOptions: hhVDoctorSDK.VideoOptions {
+    @objc get
+  }
+  @objc public var mMessageOptions: hhVDoctorSDK.MessageOptions {
+    @objc get
+  }
+  @objc public var mUserCenterOptions: hhVDoctorSDK.UsercenterOptions {
+    @objc get
+  }
+  @objc public var pVideoOptions: HHSDKVideo.VideoOptionsProtocol
+  @objc public var pMessageOptions: HHSDKVideo.MessageOptionsProtocol
+  @objc public var pUserCenterOptions: HHSDKVideo.UsercenterOptionsProtocol
+  @objc public var sdkVersion: Swift.String
+  @objc public var appVersion: Swift.String
+  @objc public var isTRTC: Swift.Bool
+  @objc public var needDNS: Swift.Bool
+  @objc public var shouldWaingCall: Swift.Bool
+  @objc public var changeDoctorInterval: Swift.Int
+  @objc public init(productId: Swift.String, isDebug: Swift.Bool = false, isDevelop: Swift.Bool = false)
+  @objc public func setUserExtension(userExtension: Swift.String)
+  @objc public func setCallExtension(callExtension: Swift.String)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class VideoOptions : ObjectiveC.NSObject, HHSDKVideo.VideoOptionsProtocol {
+  @objc public var filterCallerInfo: Swift.Bool
+  @objc public var allowBeauty: Swift.Bool
+  @objc public var allowEvaluate: Swift.Bool
+  @objc public var allowAddMember: Swift.Bool
+  @objc public var allowMulti: Swift.Bool
+  @objc public var mCallExtension: Swift.String
+  @objc public var isShowDocInfo: Swift.Bool
+  @objc public var enableCloseCamera: Swift.Bool
+  @objc public var isCloseCameraCall: Swift.Bool
+  @objc public var isCloseRealNameInVideo: Swift.Bool
+  @objc public var showInviteInVideo: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class MessageOptions : ObjectiveC.NSObject, HHSDKVideo.MessageOptionsProtocol {
+  @objc public var isByPresent: Swift.Bool
+  @objc public var isFilterSummary: Swift.Bool
+  @objc public var isFilterMedicinal: Swift.Bool
+  @objc public var defaultDocHeader: Swift.String
+  @objc public var defaultDocName: Swift.String
+  @objc public var messageTitle: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class UsercenterOptions : ObjectiveC.NSObject, HHSDKVideo.UsercenterOptionsProtocol {
+  @objc public var enableVipInfo: Swift.Bool
+  @objc public var hideUserCenter: Swift.Bool
+  @objc public var enableActivate: Swift.Bool
+  @objc public var enableMedical: Swift.Bool
+  @objc public var enableAddMemberInDoc: Swift.Bool
+  @objc public var enableBuyService: Swift.Bool
+  @objc public var enablePopRealName: Swift.Bool
+  @objc public var isCloseMoreFunc: Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class HHVideoMessage {
+  public static let instance: hhVDoctorSDK.HHVideoMessage
+  open func addListener(listener: hhVDoctorSDK.HHVideoMessageProtocol)
+  open func clearListener()
+  @objc deinit
+}
+public protocol HHVideoMessageProtocol : ObjectiveC.NSObjectProtocol {
+  func onMessage(message: Foundation.Data)
+}
+@objc public enum PermissionType : Swift.Int {
+  case locationAlways
+  case locationWhenInUse
+  case microphone
+  case camera
+  case photos
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+extension PermissionType : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class TIM : ObjectiveC.NSObject, HHSDKVideo.HHIM {
+  public static let `default`: hhVDoctorSDK.TIM
+  @objc public func register(_ cerName: Swift.String?)
+  @objc public func login(_ completion: ((Swift.String?) -> Swift.Void)?)
+  @objc public func autoLogin(_ completion: ((Swift.String?) -> Swift.Void)?)
+  @objc public func logout(_ callback: ((Swift.String?) -> Swift.Void)?)
+  @objc public func canVideo() -> Swift.Bool
+  public func sendMsg(isSignal: Swift.Bool, cmd: Swift.String, to: Swift.String, complete: ((Swift.String?) -> Swift.Void)?)
+  public var isLogined: Swift.Bool {
+    get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension TIM : ImSDK.V2TIMSDKListener {
+  public func onConnSucc()
+  @objc dynamic public func onConnectFailed(_ code: Swift.Int32, err: Swift.String!)
+  public func onDisconnect(_ code: Swift.Int32, err: Swift.String!)
+  @objc dynamic public func onKickedOffline()
+  @objc dynamic public func onUserSigExpired()
+}
+extension TIM : ImSDK.V2TIMAdvancedMsgListener {
+  @objc dynamic public func onRecvNewMessage(_ msg: ImSDK.V2TIMMessage!)
+}
+@objc @_inheritsConvenienceInitializers public class TRTC : ObjectiveC.NSObject {
+  public static let `default`: hhVDoctorSDK.TRTC
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension TRTC : HHSDKVideo.HHRTC {
+  @objc dynamic public func startCall(callee: Swift.String, orderId: Swift.String?)
+  @objc dynamic public func setRoomId(roomId: Swift.String)
+  @objc dynamic public func setOrderId(orderId: Swift.String)
+  @objc dynamic public func enterRoom(orderId: Swift.String, roomId: Swift.String)
+  @objc dynamic public func openDoctorView(userId: Swift.String, view: UIKit.UIView)
+  @objc dynamic public func closeDoctorView(userId: Swift.String)
+  @objc dynamic public func switchCamera(_ isFront: Swift.Bool)
+  @objc dynamic public func switchCameraFlash(_ isOpen: Swift.Bool)
+  @objc dynamic public func switchLocalAudio(_ isOpen: Swift.Bool)
+  @objc dynamic public func switchLocalVideo(_ isOpen: Swift.Bool, localView: UIKit.UIView)
+  @objc dynamic public func sendMsg(isSignal: Swift.Bool, cmd: Swift.String, to: Swift.String, complete: ((Swift.String?) -> Swift.Void)?)
+  @objc dynamic public func leaveRoom()
+  @objc dynamic public func startRing(audioId: Swift.Int)
+  @objc dynamic public func stopRing()
+  @objc dynamic public func snapshotVideo(userId: Swift.String?, imageBack: @escaping (UIKit.UIImage) -> ())
+}
+extension TRTC : TXLiteAVSDK_TRTC.TRTCCloudDelegate {
+  @objc dynamic public func onEnterRoom(_ result: Swift.Int)
+  @objc dynamic public func onExitRoom(_ reason: Swift.Int)
+  @objc dynamic public func onRemoteUserEnterRoom(_ userId: Swift.String)
+  @objc dynamic public func onRemoteUserLeaveRoom(_ userId: Swift.String, reason: Swift.Int)
+  @objc dynamic public func onUserVideoAvailable(_ userId: Swift.String, available: Swift.Bool)
+  @objc dynamic public func onUserVoiceVolume(_ userVolumes: [TXLiteAVSDK_TRTC.TRTCVolumeInfo], totalVolume: Swift.Int)
+  @objc dynamic public func onFirstVideoFrame(_ userId: Swift.String, streamType: TXLiteAVSDK_TRTC.TRTCVideoStreamType, width: Swift.Int32, height: Swift.Int32)
+  @objc dynamic public func onUserAudioAvailable(_ userId: Swift.String, available: Swift.Bool)
+  @objc dynamic public func onNetworkQuality(_ localQuality: TXLiteAVSDK_TRTC.TRTCQualityInfo, remoteQuality: [TXLiteAVSDK_TRTC.TRTCQualityInfo])
+  @objc dynamic public func onError(_ errCode: TXLiteAVSDK_TRTC.TXLiteAVError, errMsg: Swift.String?, extInfo: [Swift.AnyHashable : Any]?)
+}
+extension TRTC {
+  @objc dynamic public func onRecvCustomCmdMsgUserId(_ userId: Swift.String, cmdID: Swift.Int, seq: Swift.UInt32, message: Foundation.Data)
+  @objc dynamic public func onMissCustomCmdMsgUserId(_ userId: Swift.String, cmdID: Swift.Int, errCode: Swift.Int, missed: Swift.Int)
+}
+extension String {
+  public func subFrom(_ index: Swift.Int) -> Swift.String
+}
+extension hhVDoctorSDK.SkipType : Swift.Equatable {}
+extension hhVDoctorSDK.SkipType : Swift.Hashable {}
+extension hhVDoctorSDK.SkipType : Swift.RawRepresentable {}
+extension hhVDoctorSDK.HHMCallingState : Swift.Equatable {}
+extension hhVDoctorSDK.HHMCallingState : Swift.Hashable {}
+extension hhVDoctorSDK.HHMCallingState : Swift.RawRepresentable {}
+extension hhVDoctorSDK.PermissionType : Swift.Equatable {}
+extension hhVDoctorSDK.PermissionType : Swift.Hashable {}
+extension hhVDoctorSDK.PermissionType : Swift.RawRepresentable {}

@@ -1,0 +1,48 @@
+
+/* Class = "UILabel"; text = "证件类型"; ObjectID = "8Gc-Ly-dyt"; */
+"8Gc-Ly-dyt.text" = "ID Type";
+
+/* Class = "UILabel"; text = "7周岁以下儿童购买非处方药需填写监护人信息"; ObjectID = "KVK-hN-q28"; */
+"KVK-hN-q28.text" = "Need to input guardian information for children aged under 7.";
+
+/* Class = "UITextField"; placeholder = "请输入患者真实姓名"; ObjectID = "NKu-JD-W1l"; */
+"NKu-JD-W1l.placeholder" = "Name on your ID";
+
+/* Class = "UITextField"; placeholder = "请输入患者真实证件号码"; ObjectID = "PUJ-Uf-7Vj"; */
+"PUJ-Uf-7Vj.placeholder" = "Enter the ID number";
+
+/* Class = "UITextField"; placeholder = "请输入监护人真实姓名"; ObjectID = "WKp-a7-SO4"; */
+"WKp-a7-SO4.placeholder" = "Name on your ID";
+
+/* Class = "UILabel"; text = "监护人姓名"; ObjectID = "aLs-eO-mDI"; */
+"aLs-eO-mDI.text" = "Name";
+
+/* Class = "UILabel"; text = "就诊成员"; ObjectID = "d45-aF-A11"; */
+"d45-aF-A11.text" = "User name";
+
+/* Class = "UILabel"; text = "护照"; ObjectID = "fDj-jD-6Ua"; */
+"fDj-jD-6Ua.text" = "Passport";
+
+/* Class = "UILabel"; text = "身份证号输入错误，请重新输入"; ObjectID = "gCY-DF-spy"; */
+"gCY-DF-spy.text" = "身份证号输入错误，请重新输入";
+
+/* Class = "UITextField"; placeholder = "请输入监护人真实身份证号码"; ObjectID = "gOp-yZ-pM8"; */
+"gOp-yZ-pM8.placeholder" = "Name on your guardian ID";
+
+/* Class = "UILabel"; text = "身份证号"; ObjectID = "iQo-gx-qKS"; */
+"iQo-gx-qKS.text" = "ID Card";
+
+/* Class = "UILabel"; text = "手机号码"; ObjectID = "n3Q-YI-2Bm"; */
+"n3Q-YI-2Bm.text" = "Mobile number +86";
+
+/* Class = "UILabel"; text = "身份证号"; ObjectID = "pIf-Vf-5cg"; */
+"pIf-Vf-5cg.text" = "ID Card";
+
+/* Class = "UITextField"; placeholder = "请输入手机号"; ObjectID = "rAX-9h-cxA"; */
+"rAX-9h-cxA.placeholder" = "Enter mobile number";
+
+/* Class = "UILabel"; text = "真实姓名"; ObjectID = "sdb-9c-QdC"; */
+"sdb-9c-QdC.text" = "Name";
+
+/* Class = "UILabel"; text = "真实姓名"; ObjectID = "X3H-am-1eR"; */
+"X3H-am-1eR.text" = "Please upload the image of the page that shows your name and ID number.";

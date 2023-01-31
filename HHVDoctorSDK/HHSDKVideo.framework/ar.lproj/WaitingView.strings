@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "取消"; ObjectID = "9i1-f8-frb"; */
+"9i1-f8-frb.text" = "إلغاء";
+
+/* Class = "UILabel"; text = "取消"; ObjectID = "PSL-Bp-3BY"; */
+"PSL-Bp-3BY.text" = "إلغاء";
+
+/* Class = "UILabel"; text = "."; ObjectID = "Q5a-vB-g6F"; */
+"Q5a-vB-g6F.text" = ".";
+
+/* Class = "UILabel"; text = "正在呼叫医生"; ObjectID = "WgS-Vj-Py7"; */
+"WgS-Vj-Py7.text" = "اتصل بالطبيب...";
+
+/* Class = "UILabel"; text = "接听"; ObjectID = "cb0-dQ-3sl"; */
+"cb0-dQ-3sl.text" = "إجابة";

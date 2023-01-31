@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "请参照上图所示，开启所有照片权限："; ObjectID = "FSh-K5-qLv"; */
+"FSh-K5-qLv.text" = "Please refer to the image above to enable all photo permissions:";
+
+/* Class = "UIButton"; normalTitle = "取消"; ObjectID = "SDD-43-Kf0"; */
+"SDD-43-Kf0.normalTitle" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "去设置"; ObjectID = "stP-Pg-03k"; */
+"stP-Pg-03k.normalTitle" = "Setup Now";
+
+/* Class = "UILabel"; text = "选择【照片】-【所有照片】"; ObjectID = "tqk-4N-CCF"; */
+"tqk-4N-CCF.text" = "Press [Photos] - [All Photos]";

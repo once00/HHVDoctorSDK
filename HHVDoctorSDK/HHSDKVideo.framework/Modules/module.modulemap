@@ -1,0 +1,11 @@
+framework module HHSDKVideo {
+  umbrella header "HHSDKVideo-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module HHSDKVideo.Swift {
+    header "HHSDKVideo-Swift.h"
+    requires objc
+}

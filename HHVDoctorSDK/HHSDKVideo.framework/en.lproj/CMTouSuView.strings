@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "投诉"; ObjectID = "Nuz-EA-N37"; */
+"Nuz-EA-N37.text" = "Make a complain";
+
+/* Class = "UIButton"; normalTitle = "提交投诉"; ObjectID = "bsC-DO-hz3"; */
+"bsC-DO-hz3.normalTitle" = "Anonymous submit";
+
+/* Class = "UITextField"; placeholder = "请填写您的手机号码，来处理投诉事件"; ObjectID = "oap-bd-mdd"; */
+"oap-bd-mdd.placeholder" = "Please fill in your contact number for handling the complaint";

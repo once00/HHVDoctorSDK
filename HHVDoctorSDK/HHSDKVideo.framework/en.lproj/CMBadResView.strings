@@ -1,0 +1,15 @@
+
+/* Class = "UIButton"; normalTitle = "换个医生问问"; ObjectID = "Mpm-Cy-8No"; */
+"Mpm-Cy-8No.normalTitle" = "Changing doctors";
+
+/* Class = "UILabel"; text = "匿名评价"; ObjectID = "TEp-ay-Bhn"; */
+"TEp-ay-Bhn.text" = "Anonymous feedback";
+
+/* Class = "UILabel"; text = "感谢反馈"; ObjectID = "dfJ-Fs-9dC"; */
+"dfJ-Fs-9dC.text" = "Thank for feedback";
+
+/* Class = "UILabel"; text = "很抱歉给您不好的体验，建议您换个医生咨询 视频医生将持续优化用户体验"; ObjectID = "gCO-sp-izU"; */
+"gCO-sp-izU.text" = "Thank you for your feedback. \n We will deal with your complaint as soon as possible and give you feedback on the result. Sorry to bring you a bad experience, you can consult another doctor.";
+
+/* Class = "UIButton"; normalTitle = "我要投诉"; ObjectID = "z3D-0Q-OOx"; */
+"z3D-0Q-OOx.normalTitle" = "Make a complain";

@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "点击重传"; ObjectID = "4X7-jJ-62B"; */
+"4X7-jJ-62B.text" = "انقر لإعادة الإرسال";
+
+/* Class = "UILabel"; text = "对服务不满意?"; ObjectID = "9If-1J-NYA"; */
+"9If-1J-NYA.text" = "غير راض عن الخدمة ?";
+
+/* Class = "UILabel"; text = "拍照"; ObjectID = "Fia-EQ-k88"; */
+"Fia-EQ-k88.text" = "التصوير";
+
+/* Class = "UILabel"; text = "挂断"; ObjectID = "Gje-EQ-Ans"; */
+"Gje-EQ-Ans.text" = "قطع الاتصال";
+
+/* Class = "UIButton"; normalTitle = "换个医生"; ObjectID = "KlH-tD-4lo"; */
+"KlH-tD-4lo.normalTitle" = "تغيير طبيب";
+
+/* Class = "UILabel"; text = "00:00"; ObjectID = "PdO-Bc-DQu"; */
+"PdO-Bc-DQu.text" = "00:00";
+
+/* Class = "UILabel"; text = "连接中..."; ObjectID = "dEI-Tw-ffv"; */
+"dEI-Tw-ffv.text" = "...اتصال";
+
+/* Class = "UILabel"; text = "切换摄像头"; ObjectID = "e45-pd-LhO"; */
+"e45-pd-LhO.text" = "تبديل الكاميرا";
+
+/* Class = "UILabel"; text = "试一试"; ObjectID = "kwn-xe-FD1"; */
+"kwn-xe-FD1.text" = " حاول";
+
+/* Class = "UILabel"; text = "更多"; ObjectID = "gZa-5S-uu8"; */
+"gZa-5S-uu8.text" = "More";

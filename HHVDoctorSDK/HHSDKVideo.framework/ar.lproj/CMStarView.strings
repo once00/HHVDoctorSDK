@@ -1,0 +1,12 @@
+
+/* Class = "UIButton"; normalTitle = "匿名提交"; ObjectID = "ILd-ex-a5k"; */
+"ILd-ex-a5k.normalTitle" = "إرسال مجهول";
+
+/* Class = "UILabel"; text = "匿名评价"; ObjectID = "MaV-co-mC3"; */
+"MaV-co-mC3.text" = "تقييم مجهول";
+
+/* Class = "UILabel"; text = "您的评价会让医生做的更好"; ObjectID = "gZR-Ky-CF9"; */
+"gZR-Ky-CF9.text" = "تقييمك سيجعل الأطباء أفضل";
+
+/* Class = "UIButton"; normalTitle = "我要投诉"; ObjectID = "tQm-Mq-YYD"; */
+"tQm-Mq-YYD.normalTitle" = "أريد تقديم شكوى";

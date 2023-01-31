@@ -1,0 +1,12 @@
+
+/* Class = "UILabel"; text = "我们将尽快处理您的投诉，并给您反馈处理结果。抱歉给您带来不好的体验，您可以换个医生问问。"; ObjectID = "7Yc-6C-XSW"; */
+"7Yc-6C-XSW.text" = "我们将尽快处理您的投诉，并给您反馈处理结果。抱歉给您带来不好的体验，您可以换个医生问问。";
+
+/* Class = "UILabel"; text = "感谢反馈"; ObjectID = "QhZ-LC-49k"; */
+"QhZ-LC-49k.text" = "感谢反馈";
+
+/* Class = "UIButton"; normalTitle = "换个医生问问"; ObjectID = "eXb-RC-HJK"; */
+"eXb-RC-HJK.normalTitle" = "换个医生问问";
+
+/* Class = "UILabel"; text = "匿名评价"; ObjectID = "lWS-3J-ofl"; */
+"lWS-3J-ofl.text" = "匿名评价";
