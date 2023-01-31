@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
     s.social_media_url   = "https://github.com/515783034"
 
     s.platform     = :ios, "8.0"
-    s.source       = { :git => "http://code.hh-medic.com/hh_public/hhvDoctorSDK.ios.git", :tag => s.version }
+    s.source       = { :git => "https://github.com/once00/HHVDoctorSDK.git", :tag => s.version }
     # s.default_subspec = 'Base'
 
     
