@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name         = "HHVDoctorSDK"
-    s.version      = "3.6.0.01101810"
+    s.version      = "3.5.0.08041548"
     s.summary      = "和缓视频医生 SDK"
 
     s.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 
     
     s.dependency 'TXIMSDK_iOS'
-    s.dependency 'TXLiteAVSDK_Professional',"10.2.11418"
+    s.dependency 'TXLiteAVSDK_Professional',"10.1.11351"
     
     s.vendored_frameworks = 'HHVDoctorSDK/*.framework','HHVDoctorSDK/*.xcframework'
     s.resources = 'HHVDoctorSDK/resources/*.bundle'
